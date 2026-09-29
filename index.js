@@ -31,4 +31,4 @@ app.post("/api/render",upload.single("video"),(req,res)=>{
 app.post("/api/ai/remove-bg",upload.single("video"),(req,res)=>res.status(501).json({error:"Connect a segmentation model (e.g. your own inference service) here. Endpoint is wired, but no model credentials/model server were supplied."}));
 app.post("/api/ai/track",upload.single("video"),(req,res)=>res.status(501).json({error:"Connect an object-tracking inference service here."}));
 app.post("/api/ai/captions",upload.single("video"),(req,res)=>res.status(501).json({error:"Connect a speech-to-text model/API here."}));
-app.use(express.static(path.join(ROOT,"public")));app.listen(process.env.PORT||3000,()=>console.log("SEC Studio:",base));
+app.use(express.static(ROOT));app.listen(process.env.PORT||3000,()=>console.log("SEC Studio:",base));

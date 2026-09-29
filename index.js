@@ -10,7 +10,7 @@ import path from "path";
 import fs from "fs";
 import {fileURLToPath} from "url";
 dotenv.config();
-const __dirname=path.dirname(fileURLToPath(import.meta.url)), ROOT=path.resolve(__dirname,"..");
+const __dirname=path.dirname(fileURLToPath(import.meta.url)), ROOT=__dirname;
 const app=express(), upload=multer({dest:path.join(ROOT,"uploads")});
 app.use(express.json());app.use(session({secret:process.env.SESSION_SECRET||"dev-secret",resave:false,saveUninitialized:false}));
 app.use(passport.initialize());app.use(passport.session());

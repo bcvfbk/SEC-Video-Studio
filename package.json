@@ -1,0 +1,5 @@
+{
+  "name":"sec-studio-fullstack","version":"1.0.0","type":"module",
+  "scripts":{"start":"node server/index.js","dev":"node --watch server/index.js"},
+  "dependencies":{"cors":"latest","dotenv":"latest","express":"latest","express-session":"latest","multer":"latest","passport":"latest","passport-github2":"latest","passport-google-oauth20":"latest","fluent-ffmpeg":"latest"}
+}
